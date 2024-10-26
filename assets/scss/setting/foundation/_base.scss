@@ -1,0 +1,28 @@
+
+@use "../foundation/variable" as *;
+
+/*---------------------------
+base
+---------------------------*/
+/*
+{
+    outline: 1px solid red !important;
+}
+   */
+
+body{
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+    color: $basic-c;
+}
+
+ul,li{
+    list-style: none;
+}
+

@@ -1,0 +1,134 @@
+/*
+---------------------------
+@use '../foundation/variable' as *;
+
+objectの場合
+@use '../../foundation/variable' as *;
+---------------------------
+*/
+
+/*---------------------------
+変数
+---------------------------*/
+
+/*whith*/
+
+//content
+$content-width: 1440px;
+
+//section
+$section-width: 1024px;
+
+//sp
+$width-clac-5: calc(100% - 5%);
+
+/*color*/
+
+$basic-c: #222222;
+
+$sub-c-dark: #988c2c;
+
+$sub-c-light: #afa86f;
+
+$bg-basic-c: #faf7f1;
+
+/*font-size*/
+
+$front-fv-s: clamp(3rem, 2.037rem + 4.4vw, 6rem);
+//48-96(3rem-6rem)
+$front-copy-txt: clamp(1.3rem, 1.179rem + 1.5vw, 2.5rem);
+//24-40(1.5rem-2.5rem)
+$front-main-txt: clamp(1.125rem, 0.764rem + 1.65vw, 2.25rem);
+//18-36(1.125rem-2.25rem)
+$front-ttl-ja: clamp(2rem, 1.599rem + 1.83vw, 3.4rem);
+//32-52(2rem-3.25rem)
+$front-ttl-en: clamp(5rem, 3.876rem + 5.14vw, 8.5rem);
+//80-136(5rem-8.5rem)
+$section-ttl: clamp(1.5rem, 1.339rem + 0.73vw, 2rem);
+//32-24(1.5rem-2rem)
+$sub-ttl: clamp(1rem, 0.92rem + 0.37vw, 1.25rem);
+//16-20(1rem-1.25rem)
+$sub-txt: clamp(0.875rem, 0.835rem + 0.18vw, 1rem);
+//14-16(0.875rem-1rem)
+$local-txt: clamp(0.75rem, 0.67rem + 0.37vw, 1rem);
+//12-16(0.75rem-1rem)
+
+//10-24 ( clamp(0.625rem, 0.344rem + 1.28vw, 1.5rem) )
+
+//12-24 ( clamp(0.75rem, 0.509rem + 1.1vw, 1.5rem) )
+
+//14-24 ( clamp(0.875rem, 0.674rem + 0.92vw, 1.5rem) )
+
+//14-18( clamp(0.875rem, 0.795rem + 0.37vw, 1.125rem) )
+
+//32-64  ( clamp(2rem, 1.358rem + 2.94vw, 4rem)   )
+
+/*
+【whith 1440】
+12 = 0.75rem
+14 = 0.875rem
+16 = 1rem
+18 = 1.125rem
+20 = 1.25rem
+24 = 1.5rem
+32 = 2rem
+*/
+
+/* z-index */
+
+$z-index-back: -1;
+
+$z-index-default: 1;
+
+$z-index-defaultplus: 2;
+
+$z-index-50: 50;
+
+$z-index-100: 100;
+
+$z-index-max: 9999;
+
+/*---------------------------
+mixin
+---------------------------*/
+
+/* ブレイクポイントメディアクエリ用 */
+
+$breakpoints: (
+  "sp": "screen and (max-width: 400px)",
+  "md": "screen and (max-width: 767px)",
+  "lg": "screen and (min-width: 768px)",
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoints, $bp)} {
+    @content; // 中身を出力
+  }
+}
+/* 
+@include mq(sp) {
+    display: block;
+    } 
+*/
+
+/* flex */
+
+@mixin flex($justify: space-between, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+/* 
+    @include flex();
+    */
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 
+        @include flex-center;
+    */
