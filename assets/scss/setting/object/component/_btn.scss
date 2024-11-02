@@ -1,0 +1,20 @@
+@use "../../foundation/variable" as *;
+/*---------------------------
+btn
+---------------------------*/
+
+.c-btn-orange{
+    display: inline-block;
+    background-color: $sub-c;
+    display: grid;
+    place-items: center;
+}
+.c-btn-blue{
+    display: inline-block;
+    background-color: $basic-c;
+    display: grid;
+    place-items: center;
+    a{
+        color: #fff;
+    }
+}

@@ -41,10 +41,6 @@ function my_enqueue_scripts_and_styles()
    // スタイルの読み込み
    wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '9.0.0');
 
-   // Google Fonts の読み込み
-   wp_enqueue_style('google-fonts-viga', 'https://fonts.googleapis.com/css2?family=Viga&display=swap', array(), null);
-   wp_enqueue_style('google-fonts-noto', 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap', array(), null);
-
    // カスタムスタイルを最後に読み込む
    wp_enqueue_style('my-styles', $uri . '/assets/css/style.css', array('swiper-css'), '1.0.0');
 

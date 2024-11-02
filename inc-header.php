@@ -1,218 +1,101 @@
-<?php if (is_front_page()): ?>
-    <header class="l-header">
-        <div class="l-header__wapper">
+<header class="l-header">
+    <div class="l-header__container">
+        <div class="l-header__left-wapper">
             <h1 class="l-header__logo"><a href="<?php echo home_url(); ?>" class="l-header__logo-link">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/logo-tetote.svg" alt="logo" class="l-header__logo-white" id="logo-white">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/bk-logo.svg" alt="logo" class="l-header__logo-black" id="logo-black">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Engress-logo.svg" alt="logo" class="logo-img" id="header-logo">
                 </a>
             </h1>
+            <nav class="l-header__nav">
+                <ul class="l-header__list">
+                    <li class="l-header__item"><a href="<?php echo esc_url(home_url('')); ?>" class="l-header__link">ホーム</a></li>
+                    <li class="l-header__item"><a href="<?php echo esc_url(home_url('')); ?>" class="l-header__link">お知らせ</a></li>
+                    <li class="l-header__item"><a href="<?php echo esc_url(home_url('')); ?>" class="l-header__link">ブログ</a></li>
+                    <li class="l-header__item"><a href="<?php echo esc_url(home_url('')); ?>" class="l-header__link">コース・料金</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- l-header__left-wapper -->
+        <div class="l-header__right-wapper">
+            <div class="l-header__tel-wapper c-tel">
+                <p class="c-tel__time">平日08:00~20:00</p>
+                <p class="c-tel__number"><a href="tel:0123-456-7890" class="c-tel__number-link">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/juwaki.png" alt="電話ロゴ">
+                        0123-456-7890</a></p>
+            </div>
             <div class="l-header__btn-wapper">
-                <div class="l-header__btn-box">
-                    <a href="<?php echo esc_url(home_url('details')); ?>" class="c-btn-small">募集要項</a>
-                </div>
-                <div class="l-header__btn-box">
-                    <a href="<?php echo esc_url(home_url('entry')); ?>" class="c-btn-small --colored">ENTRY</a>
-                </div>
-                <div class="l-header__hamburger-wrapper">
-                    <button class="l-header__hamburger c-hamburger-btn" id="js-ham" aria-label="メニューを開く">
-                        <div class="l-header__hamburger-icon">
-                            <span class="l-header__hamburger-bar c-hamburger-bar"></span>
-                            <span class="l-header__hamburger-bar c-hamburger-bar"></span>
-                            <span class="l-header__hamburger-bar c-hamburger-bar"></span>
-                        </div>
-                        <span class="l-header__hamburger-text c-hamburger-text">menu</span>
-                    </button>
-                </div>
+                <a href="<?php echo esc_url(home_url('price')); ?>" class="l-header__btn-link">
+                    <div class="l-header__btn c-btn-orange">
+                        資料請求
+                    </div>
+                </a>
+                <a href="<?php echo esc_url(home_url('contact')); ?>" class="l-header__btn-link">
+                    <div class="l-header__btn c-btn-blue">
+                        お問い合わせ
+                    </div>
+                </a>
             </div>
             <!-- l-header__btn-wapper -->
         </div>
-        <!-- l-header__wapper -->
-    </header>
-    <!-- l-header -->
-<?php else:
-    //ここから下層ページのヘッダー
-?>
-    <header class="l-header l-header--bg-white">
-        <div class="l-header__wapper">
-            <h1 class="l-header__logo"><a href="<?php echo home_url(); ?>" class="l-header__logo-link">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/bk-logo.svg" alt="logo" class="l-header__logo-black--page" id="logo-black">
+        <!-- l-header__right-wapper -->
+    </div>
+    <!-- l-header__container -->
+</header>
+<!-- l-header -->
+
+<!-- スマホスタイル -->
+
+<div class="l-sp-header__wapper">
+    <h1 class="l-header__logo">
+        <a href="<?php echo home_url(); ?>" class="l-header__logo-link">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/Engress-logo.svg" alt="logo" class="logo-img" id="header-logo">
+        </a>
+    </h1>
+    <div class="l-sp-menu__btn-wapper">
+        <button class="c-sp-menu-btn" id="sp_menu_btn" aria-label="hamburger">
+            <span class="c-sp-menu-btn__border"></span>
+            <span class="c-sp-menu-btn__border"></span>
+            <span class="c-sp-menu-btn__border"></span>
+        </button>
+        <!-- l-sp-menu-btn -->
+    </div>
+    <!-- l-sp-menu__btn-wapper -->
+</div>
+<!-- l-sp-header__wapper -->
+
+<div class="l-sp-nav" id="l-sp-nav">
+    <div class="l-sp-nav__box">
+        <nav class="l-sp-nav__nav">
+            <ul class="l-sp-nav__list">
+                <li class="l-sp-nav__item"><a href="#" class="l-sp-nav__link">ホーム</a></li>
+                <li class="l-sp-nav__item"><a href="#" class="l-sp-nav__link">お知らせ</a></li>
+                <li class="l-sp-nav__item"><a href="#" class="l-sp-nav__link">ブログ</a></li>
+                <li class="l-sp-nav__item"><a href="#" class="l-sp-nav__link">コース・料金</a></li>
+            </ul>
+        </nav>
+        <!-- gloval-nav__nav -->
+        <div class="l-sp-nav__wapper">
+            <div class="l-sp-nav__tel-wapper">
+                <p class="c-tel">
+                    <span class="c-tel-time">平日08:00~20:00</span>
+                    <a href="tel:0123-456-7890" class="c-tel-number">0123-456-7890</a>
+                </p>
+            </div>
+            <div class="l-sp-nav__btn-wapper">
+                <a href="<?php echo esc_url(home_url('price')); ?>" class="l-sp-nav__btn-link">
+                    <div class="l-sp-nav__btn c-btn-orange">
+                        資料請求
+                    </div>
                 </a>
-            </h1>
-            <div class="l-header__btn-wapper">
-                <div class="l-header__btn-box">
-                    <a href="<?php echo esc_url(home_url('details')); ?>" class="c-btn-small">募集要項</a>
-                </div>
-                <div class="l-header__btn-box">
-                    <a href="<?php echo esc_url(home_url('entry')); ?>" class="c-btn-small --colored">ENTRY</a>
-                </div>
-                <div class="l-header__hamburger-wrapper">
-                    <button class="l-header__hamburger c-hamburger-btn c-hamburger-btn--black"
-                        id="js-ham"
-                        aria-label="メニューを開く">
-                        <div class="l-header__hamburger-icon">
-                            <span class="l-header__hamburger-bar c-hamburger-bar"></span>
-                            <span class="l-header__hamburger-bar c-hamburger-bar"></span>
-                            <span class="l-header__hamburger-bar c-hamburger-bar"></span>
-                        </div>
-                        <span class="l-header__hamburger-text c-hamburger-text">menu</span>
-                    </button>
-                </div>
+                <a href="<?php echo esc_url(home_url('contact')); ?>" class="l-sp-nav__btn-link">
+                    <div class="l-sp-nav__btn c-btn-blue">
+                        お問い合わせ
+                    </div>
+                </a>
             </div>
-            <!-- l-header__btn-wapper -->
+            <!-- l-sp-nav__btn-wapper -->
         </div>
-        <!-- l-header__wapper -->
-    </header>
-    <!-- l-header -->
-<?php endif; ?>
-
-
-
-
-
-
-<?php if (is_front_page()): ?>
-
-    <div class="swiper js-fv-slide">
-        <div class="swiper-wrapper js-fv__slide-wapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fv01.png" class="swiper-slide js-fv__slide-item">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/fv02.png" class="swiper-slide js-fv__slide-item">
-        </div>
-        <!-- swiper-wrapper js-fv__slide-wapper -->
+        <!-- l-sp-nav__-wapper -->
     </div>
-    <!-- swiper js-fv-slide -->
-    <div class="l-fv-container">
-        <!-- js-fv__slide-wapper -->
-        <h2 class="fv-heading">BECOME A<wbr>
-            CHALLENGER.</h2>
-        <p class="fv-heading--sub">君の挑戦が、意思が、未来を変える</p>
-        <div class="fv-heading__news">
-            <p class="fv-heading__news-ttl">NEWS</p>
-            <?php
-            // ランダムなニュース記事を取得
-            $args = array(
-                'post_type' => 'blog',      // 投稿タイプが 'post' の場合（通常の投稿）
-                'posts_per_page' => 1,      // 1件だけランダムで取得
-                'orderby' => 'rand'         // ランダム順に取得
-            );
-            $random_news_query = new WP_Query($args);
-
-            // 記事があるかチェック
-            if ($random_news_query->have_posts()) :
-                while ($random_news_query->have_posts()) : $random_news_query->the_post();
-            ?>
-                    <a href="<?php the_permalink(); ?>" class="fv-heading__news-link">
-                        <span class="fv-heading__news-txt"><?php the_title(); ?></span>
-                        <span class="fv-heading__news-btn">VIEW MORE</span>
-                    </a>
-            <?php
-                endwhile;
-            endif;
-
-            // クエリのリセット
-            wp_reset_postdata();
-            ?>
-        </div>
-        <!-- fv-heading__news -->
-    </div>
-    <!-- l-fv-container -->
-
-
-    <!-- single-staff.php 用の個別ヘッダー -->
-<?php elseif (is_singular('staff')): ?>
-    <?php
-    // ACFやカスタムフィールドからスタッフ情報を取得
-    $staff_img_id = get_field('staff-img'); // 画像フィールド
-    $main_copy = get_field('main-copy');   // メインキャッチコピー
-    $sub_copy = get_field('sub-copy');     // サブキャッチコピー
-    $job_category = get_field('job-category'); // 職種
-    $entering_date = get_field('entering-company-date'); // 入社日
-    $staff_comment = get_field('comment'); // コメントや他のカスタムフィールド
-    $staff_name = get_the_title(); // スタッフの名前（投稿のタイトル）
-    $staff_permalink = get_permalink(); // 詳細ページのリンク
-
-    ?>
-    <section class="staff-header">
-        <div class="staff-header__content l-section">
-            <div class="staff-heading">
-                <h2 class="staff-heading__ttl"><span class="bg"><?php echo esc_html($main_copy); ?></span></h2>
-                <p class="staff-heading__sub-ttl"><span class="bg"><?php echo esc_html($sub_copy); ?></span></p> <!-- ACFを使って職位を表示 -->
-                <p class="staff-heading__category"><?php echo esc_html($job_category); ?></p>
-                <p class="staff-heading__name">
-                    <?php echo esc_html($staff_name); ?>
-                    <span class="staff-heading__joining">
-                        <?php echo esc_html($entering_date); ?>年入社
-                    </span>
-                </p>
-                <p class="staff-heading__txt">
-                    <?php echo esc_html($staff_comment); ?>
-                </p>
-            </div>
-            <figuer class="staff-header__img-wapper">
-                <?php if ($staff_img_id): ?>
-                    <img src="<?php echo esc_url(wp_get_attachment_image_url($staff_img_id, 'full')); ?>" alt="スタッフ画像" class="staff-header__img">
-                <?php endif; ?>
-            </figuer>
-        </div>
-        <!-- staff-header__content l-section -->
-    </section>
-    <!-- staff-header -->
-    <div class="navigation-bg">
-        <div class="navigation-wapper">
-        <?php
-            if (function_exists('bcn_display')):
-                bcn_display();
-            endif; ?>
-        </div>
-    </div>
-
-
-    <!-- ナビゲーションのみを表示する分岐 -->
-<?php elseif (is_page('entry') || is_single('')): ?>
-    <div class="navigation-bg navigation-bg--heght">
-        <div class="navigation-wapper">
-            <?php
-            if (function_exists('bcn_display')):
-                bcn_display();
-            endif; ?>
-        </div>
-    </div>
-
-
-
-
-
-    <!-- その他のページ（通常のページ） -->
-<?php else: ?>
-    <?php
-    // ACFやカスタムフィールドからスタッフ情報を取得
-    $main_img_id = get_field('main_img'); // 画像フィールド
-    $page_ttl = get_field('page_ttl');   // ページタイトル
-    $heading_ttl = get_field('heading_ttl');     // キャッチコピー
-    $heading_txt = get_field('heading_txt');     // サブキャッチコピー
-    ?>
-    <div class="about-fv-wapper page-fv-wapper">
-        <?php if (has_post_thumbnail()): ?>
-            <!-- アイキャッチ画像がある場合 -->
-            <?php the_post_thumbnail('full', array('class' => 'page-fv-img')); ?>
-        <?php else: ?>
-            <!-- アイキャッチ画像がない場合、デフォルト画像を表示 -->
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/about-fv.png" alt="広いオフィス" class="page-fv-img">
-        <?php endif; ?>
-        <div class="page-heading-position">
-            <h2 class="page-heading c-heading"><span class="bg"><?php echo esc_html($page_ttl); ?></span></h2>
-            <p class="page-heading-ttl c-heading-ttl"><span class="bg"><?php echo esc_html($heading_ttl); ?></span></p>
-            <p class="page-heading-txt c-heading-txt"><span class="bg"><?php echo esc_html($heading_txt); ?></span></p>
-        </div>
-    </div>
-    <div class="navigation-bg">
-        <div class="navigation-wapper">
-            <?php
-            if (function_exists('bcn_display')):
-                bcn_display();
-            endif; ?>
-        </div>
-    </div>
-<?php endif; ?>
-
-<?php get_template_part('content-gloval'); ?>
-
+    <!-- l-sp-nav__box -->
+</div>
+<!-- l-sp-nav -->
