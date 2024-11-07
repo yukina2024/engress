@@ -3,167 +3,180 @@
 footer
 ---------------------------*/
 
- .l-footer{
-    width: 100%;
-    margin-inline: auto;
- }
- .l-footer__contact{
-    width: 100%;
-    height: 259.4px;
-    background-image: url(../images/cta.png);
-    background-size: cover;
-    background-position: center;
- }
- .l-footer-contact-wapper{
-    max-width: $section-width;
-    width: 100%;
-    height: 100%;
-    margin-inline: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
- }
- .l-footer-text{
-    font-size: $font-size-32;
-    line-height: 1.5;
-    font-weight: 700;
-    color: #fff;
- }
- .l-footer__btn{
-    margin-top: 13px;
-    width: 280px;
-    height: 53px;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 1;
- }
- .l-footer__btn-link{
-    color: #fff;
-    transition: all 0.3s;
-    @media (any-hover: hover){
-        &:hover{
-           transform: scale(1.1);
-        }
-    }
- }
- .l-footer__cotact-link-wapper{
-    margin-top: 23px;
-    font-size: 1rem;
-    line-height: 1;
- }
- .l-footer__contact-link{
-    color: #fff;
-    text-decoration: underline;
- }
-
- .l-footer__tel{
-    max-width: $section-width;
-    width: 100%;
-    height: 83px;
-    margin-inline: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
- }
-
- .l-footer__tel-text{
-    font-weight: 700;
- }
-.l-footer__tel-item{
-    font-size: $font-size-36;
-    line-height: 1;
-    font-weight: 700;
+.l-footer {
+  width: 100%;
+  margin-inline: auto;
 }
-.l-footer__tel-time{
-    line-height: 1.5;
-    padding-inline-end: 120px;
+.l-footer__contact {
+  width: 100%;
+  height: 259.4px;
+  background-image: url(../images/cta.png);
+  background-size: cover;
+  background-position: center;
 }
-.l-footer__bg{
-    display: inline-block;
-    width: 100%;
+.l-footer-contact-wapper {
+  max-width: $section-width;
+  width: calc(100% - 30px);
+  padding-inline: 15px;
+  height: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.l-footer-text {
+  font-size: $font-size-32;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #fff;
+}
+
+.l-footer__tel {
+  max-width: $section-width;
+  width: calc(100% - 30px);
+  padding-inline: 15px;
+  height: 83px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  @media only screen and (max-width: 850px) {
+    margin-block: 20px;
     height: auto;
-    background-color: $basic-c;
-}
-.l-footer__nav{
-    max-width: $section-width;
-    width: 100%;
-    height: 229px;
-    margin-block-start: 34px;
-    margin-inline: auto;
-    display: flex;
-    justify-content: space-between;
-    color: #fff;
-}
-.l-footer-nav__list{
-    height: 23px;
-    display: flex;
-    align-items: center;
-    gap: 21px;
-    margin-block-start: 9px;
-}
-.l-footer-nav__item{
-    font-weight: 700;
-    padding-right: 21px;
-    border-right: 1px solid #fff;
-    &:last-child{
-        border-right: none;
-        padding-right: 0;
-    }
+    flex-direction: column;
+  }
 }
 
-.l-footer-nav__link{
+.l-footer__tel-text {
+  font-weight: 700;
+}
+.l-footer__tel-item {
+  font-size: $font-size-36;
+  line-height: 1;
+  font-weight: 700;
+}
+.l-footer__tel-time {
+  line-height: 1.5;
+  padding-inline-end: 120px;
+  @media only screen and (max-width: 850px) {
+    padding-inline-end: 0;
+  }
+}
+.l-footer__bg {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  background-color: $basic-c;
+}
+.l-footer__nav {
+  max-width: $section-width;
+  width: calc(100% - 30px);
+  padding-inline: 15px;
+  min-height: 229px;
+  height: 100%;
+  margin-block-start: 34px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  @include mq(md) {
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.l-footer-nav__list {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  margin-block-start: 9px;
+  @include mq(sp) {
+    flex-direction: column;
+    margin-block-end: 50px;
+  }
+}
+
+.l-footer-nav__item {
+  height: 23px;
+  font-weight: 700;
+  padding-right: 21px;
+  border-right: 1px solid #fff;
+  &:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  @include mq(sp) {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+.l-footer-nav__link {
+  display: block;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: $sub-c;
+    }
+  }
+}
+
+.l-footer__logo {
+  width: 197px;
+  height: 58px;
+  background-color: #fff;
+  @include mq(sp) {
+    margin-inline: auto;
+  }
+}
+.l-footer__logo-link {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.l-footer__nav-tel {
+  margin-block-start: 27px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  @include mq(md) {
+    align-items: start;
+    padding-block-end: 20px;
+  }
+  @include mq(sp) {
+    align-items: center;
+  }
+  .c-tel__time {
+    margin-block-start: 13px;
+  }
+  .c-tel__number-link {
+    display: inline-block;
     cursor: pointer;
     color: #fff;
     transition: all 0.3s;
-    @media (any-hover: hover){
-        &:hover{
-            color: $sub-c;
-        }
+    @media (any-hover: hover) {
+      &:hover {
+        color: $sub-c;
+      }
     }
+  }
 }
-
-.l-footer__logo{
-    width: 197px;
-    height: 58px;
-    background-color: #fff;
-}
-.l-footer__logo-link{
-    cursor: pointer;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-}
-.l-footer__nav-tel{
-    margin-block-start: 27px;
-    text-align: end;
-    .c-tel__time {
-        margin-block-start: 13px;
-      }
-      .c-tel__number-link{
-        cursor: pointer;
-        color: #fff;
-        transition: all 0.3s;
-        @media (any-hover: hover){
-            &:hover{
-                color: $sub-c;
-            }
-        }
-      }
-}
-.l-footer-copyright{
-    max-width: $section-width;
-    width: 100%;
-    height: 34px;
-    margin-inline: auto;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-size: 0.75rem;
-    line-height: 1;
-    font-weight: 700;
+.l-footer-copyright {
+  max-width: $section-width;
+  width: 100%;
+  height: 34px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1;
+  font-weight: 700;
 }

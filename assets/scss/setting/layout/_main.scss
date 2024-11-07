@@ -2,3 +2,10 @@
 /*---------------------------
 main
 ---------------------------*/
+
+.l-section{
+    width: 100%;
+    max-width: $section-width;
+    margin-inline: auto;
+    padding-inline: 15px;
+}

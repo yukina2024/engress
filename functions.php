@@ -36,23 +36,13 @@ add_action('wp_enqueue_scripts', 'dequeue_slick_files', 20);
 // CSS と JS の読み込み
 function my_enqueue_scripts_and_styles()
 {
-   $uri = esc_url(get_template_directory_uri());
-
-   // スタイルの読み込み
-   wp_enqueue_style('swiper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array(), '9.0.0');
-
-   // カスタムスタイルを最後に読み込む
-   wp_enqueue_style('my-styles', $uri . '/assets/css/style.css', array('swiper-css'), '1.0.0');
-
-   // スクリプトの読み込み
+   $uri = get_template_directory_uri();
+   // テーマ内のカスタムスタイルを読み込み
+   wp_enqueue_style('my-styles', $uri . '/assets/css/style.css', array(), '1.0.0');
+   // jQueryを読み込み（WordPressの組み込み版）
    wp_enqueue_script('jquery');
-   wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array(), '9.0.0', true);
-   wp_enqueue_script('my-script', $uri . '/assets/js/script.js', array('jquery', 'swiper-js'), '1.0.0', true);
-   // Contact Form 7 リダイレクト用スクリプトの追加
-   wp_enqueue_script('cf7-redirect', $uri . '/assets/js/cf7-redirect.js', array('jquery'), '1.0.1', true);
-   wp_localize_script('cf7-redirect', 'cf7_redirect_data', array(
-      'ajax_url' => admin_url('admin-ajax.php'),
-   ));
+   // カスタムスクリプトを読み込み
+   wp_enqueue_script('my-script', $uri . '/assets/js/script.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'my_enqueue_scripts_and_styles');
 

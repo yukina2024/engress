@@ -19,14 +19,33 @@ header
     justify-content: space-between;
     align-items: center;
   }
+  @include mq(md) {
+    display: none;
+    } 
 }
 
-.l-header__left-wapper {
+.l-header__logo-link{
+  cursor: pointer;
+  transition: all 0.3s;
+  @media (any-hover: hover) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.l-header__wapper {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 30px;
 }
+
+@media only screen and (max-width: 1023px) {
+  .l-header__nav{
+    display: none;
+  }
+}
+
 
 .l-header__list {
   display: flex;
@@ -96,7 +115,3 @@ header
     }
   }
 }
-
-/*---------------------------
-ハンバーガーメニュー
----------------------------*/

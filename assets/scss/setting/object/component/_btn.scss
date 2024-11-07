@@ -18,3 +18,47 @@ btn
         color: #fff;
     }
 }
+
+.c-btn-white{
+    display: inline-block;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
+    a{
+        color: $basic-c;
+    }
+}
+
+/*
+c-global
+*/
+
+.c-global__btn {
+    margin-top: 13px;
+    width: 280px;
+    height: 53px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .c-global__btn-link {
+    display: inline-block;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .c-global__cotact-link-wapper {
+    margin-top: 23px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  .c-global__contact-link {
+    color: #fff;
+    text-decoration: underline;
+  }
