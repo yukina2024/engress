@@ -51,7 +51,7 @@ add_action('wp_enqueue_scripts', 'my_enqueue_scripts_and_styles');
 //アイキャッチ画像が利用できるように
 add_theme_support('post-thumbnails');
 
-
+/*
 // 画像にwidthとheightを自動で追加しない
 add_filter('wp_get_attachment_image_attributes', 'remove_image_dimensions', 10, 1);
 
@@ -65,8 +65,11 @@ function remove_image_dimensions($attr)
    }
    return $attr;
 }
+   */
+
 
 //画像のサイズを指定
+
 
 //TOPページメイン画像
 add_image_size('top', 1440, 823, true);
@@ -78,5 +81,20 @@ add_image_size('blog', 156, 180, true);
 add_image_size('staff', 300, 379, true);
 
 //各ページのメイン画像用のサイズ
-add_image_size('detail', 1440, 339, true);
+add_image_size('detail', 1920, 221, true);
 
+
+
+
+// カスタム投稿タイプの追加
+
+function enable_custom_post_type_archive($args, $post_type) {
+   if ('books' === $post_type) { // 投稿タイプスラッグ
+       $args['has_archive'] = true; // アーカイブを有効化
+   }
+   return $args;
+}
+add_filter('register_post_type_args', 'enable_custom_post_type_archive', 10, 2);
+
+
+// カスタムフィールド

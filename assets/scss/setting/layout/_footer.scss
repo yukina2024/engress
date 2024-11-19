@@ -6,6 +6,7 @@ footer
 .l-footer {
   width: 100%;
   margin-inline: auto;
+  margin-block-start: 119px;
 }
 .l-footer__contact {
   width: 100%;
@@ -14,7 +15,7 @@ footer
   background-size: cover;
   background-position: center;
 }
-.l-footer-contact-wapper {
+.l-footer-contact-wrapper {
   max-width: $section-width;
   width: calc(100% - 30px);
   padding-inline: 15px;
@@ -30,6 +31,8 @@ footer
   line-height: 1.5;
   font-weight: 700;
   color: #fff;
+  text-wrap: balance;
+  text-align: center;
 }
 
 .l-footer__tel {

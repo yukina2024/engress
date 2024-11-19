@@ -1,6 +1,6 @@
 <?php
+/* template name: news*/
 get_header();
-/* template name: contact-thanks */
 ?>
 
 <?php

@@ -2,119 +2,129 @@
 /*---------------------------
 ハンバーガーメニュー
 ---------------------------*/
-.l-sp__wapper{
-    display: none;
-    @include mq(md) {
-      display: block;
-      height: 60px;
-      width: calc(100% - 25px);
-      padding-inline-start: 15px;
-      padding-inline-end: 10px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #fff;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: $z-index-100;
-      } 
-    }
-  
-  .c-sp-menu-btn{
+.l-sp__wrapper {
+  display: none;
+  @include mq(md) {
     display: block;
-    width: 28px;
-    height: 28px;
-    cursor: pointer;
-    transition: all 0.3s;
+    height: 60px;
+    width: calc(100% - 25px);
+    padding-inline-start: 15px;
+    padding-inline-end: 10px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-  }
-  .c-sp-menu-btn__border{
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: $basic-c;
-  }
-  .is-active.l-sp__wapper{
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $z-index-100;
   }
-  .is-active.c-sp-menu-btn{
-    .l-sp-nav__link{
-      background-color: $sub-c;
-      &:nth-child(1){
-        transform: translateY(10px) rotate(45deg);
-      }
-      &:nth-child(2){
-        display: none;
-      }
-      &:nth-child(3){
-        transform: translateY(-10px) rotate(-45deg);
-      }
+}
+
+.c-sp-menu-btn {
+  display: block;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.c-sp-menu-btn__border {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: $basic-c;
+  transition: all 0.3s;
+}
+.c-sp-menu-btn.is-active {
+  .c-sp-menu-btn__border {
+    background-color: currentColor;
+
+    &:nth-child(1) {
+      transform: translateY(16px) rotate(45deg);
+    }
+    &:nth-child(2) {
+      display: none;
+    }
+    &:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
     }
   }
-  
-  
-  /*---------------------------
+}
+/*---
+  }
+------------------------
   開いた画面
   ---------------------------*/
-  
-  
-  /* 初期状態でdialogを非表示 */
-  .l-sp-nav {
-    display: none; 
-  }
-  
-  /* dialogが開いているときに表示 */
-  .l-sp-nav[open] {
-    display: block; /* open属性が付いたら表示する */
-    background-color: $basic-c;
-    width: calc(100% - 30px);
-    height: 100%;
-    padding-inline: 15px;
-    color: #fff;
-    padding-block-start: 80px;
-  
-  .l-sp-nav__box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+
+.l-sp-nav {
+  display: none;
+}
+
+.l-sp-nav.is-active {
+  display: block;
+  background-color: $basic-c;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  color: #fff;
+  scrollbar-gutter: 10px;
+  display: grid;
+  place-items: center;
+  z-index: $z-index-50;
+
+  .l-sp-nav__box {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    gap: 50px;
     margin-block: 10%;
   }
-  .l-sp-nav__item{
+  .l-sp-nav__item {
     font-size: $font-size-36;
     font-weight: 700;
     line-height: 1;
     margin-block-start: 2rem;
-    &:first-child{
+    padding-block-end: 15px;
+    border-bottom: dotted 2px currentColor;
+    &:first-child {
       margin-block-start: 0;
     }
   }
-  .l-sp-nav__btn-wapper{
+  .l-sp-nav__btn-wrapper {
     display: inline-flex;
-    gap: 10px;
+    gap: 20px;
     margin-block-start: 10px;
   }
-    .l-sp-nav__link{
-      color: #fff;
-      cursor: pointer;
-      transition: all 0.3s;
-      @media (any-hover: hover) {
-        &:hover {
-          color: $sub-c;
-        }
+  .l-sp-nav__link {
+    width: 100%;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $sub-c;
       }
     }
-    .l-sp-nav__btn{
-      width: 142px;
-      height: 50px;
-      font-weight: 700;
-      border-radius: 5px;
+  }
+  .l-sp-nav__btn {
+    width: 142px;
+    height: 50px;
+    font-weight: 700;
+    border-radius: 5px;
+  }
+}
+.l-sp-nav__btn-link {
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: $z-index-50;
+  @media (any-hover: hover) {
+    &:hover {
+      transform: scale(1.1);
     }
   }
-  
-  
+}

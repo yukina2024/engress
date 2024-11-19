@@ -1,0 +1,11 @@
+
+@use "../../foundation/variable" as *;
+/*---------------------------
+text
+---------------------------*/
+.u-text-white{
+    height: 32px;
+    background-color: #fff;
+    color: $basic-c;
+    display: grid;
+}

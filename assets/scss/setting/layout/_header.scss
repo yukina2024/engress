@@ -7,6 +7,8 @@ header
   width: 100%;
   height: 80px;
   background-color: #fff;
+  position: fixed;
+  z-index: $z-index-100;
   &__container {
     //l-header__container
     max-width: $content-width;
@@ -33,7 +35,7 @@ header
     }
   }
 }
-.l-header__wapper {
+.l-header__wrapper {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -68,13 +70,13 @@ header
   }
 }
 
-.l-header__right-wapper {
+.l-header__right-wrapper {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 23px;
 }
-.l-header__tel-wapper {
+.l-header__tel-wrapper {
   display: inline-block;
   display: flex;
   flex-direction: column;
@@ -93,7 +95,7 @@ header
   }
 }
 
-.l-header__btn-wapper {
+.l-header__btn-wrapper {
   display: flex;
   gap: 10px;
 }

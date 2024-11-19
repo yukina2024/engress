@@ -17,7 +17,7 @@ objectの場合
 $content-width: 1280px;
 
 //section
-$section-width: calc(931px - 30px);
+$section-width: 901px;
 
 //sp
 $width-clac-5: calc(100% - 5%);
@@ -47,6 +47,15 @@ $font-size-18: clamp(0.875rem, 0.792rem + 0.42vw, 1.125rem);
 $font-size-16: clamp(0.75rem, 0.667rem + 0.42vw, 1rem);
 //12-16
 
+@function fz($px) {
+  @return ($px / 16) * 1rem;
+}
+
+/* 使用例
+.example {
+  font-size: fz(32); // 32px → 2remに変換される
+}
+*/
 /*
 【whith 1280】
 12 = 0.75rem
@@ -90,7 +99,7 @@ $breakpoints: (
   }
 }
 /* 
-@include mq(sp) {
+@include mq(md) {
     display: block;
     } 
 */
@@ -116,3 +125,4 @@ $breakpoints: (
 /* 
         @include flex-center;
     */
+

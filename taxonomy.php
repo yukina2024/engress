@@ -1,6 +1,6 @@
 <?php
+/* template name: Taxonomy */
 get_header();
-/* template name: contact-thanks */
 ?>
 
 <?php

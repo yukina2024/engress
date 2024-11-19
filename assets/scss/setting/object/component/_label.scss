@@ -1,0 +1,47 @@
+@use "../../foundation/variable" as *;
+/*---------------------------
+lable
+---------------------------*/
+
+.c-label__item{
+    width: 280px;
+    height: 90px;
+    display: grid;
+    place-items: center;
+    background-color: $basic-c;
+    color: #fff;
+    font-size: fz(22);
+    font-weight: 700;
+    line-height: 1;
+    &:last-of-type{
+        position: relative;
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            width: 18px;
+            height: 2px;
+            background-color: $basic-c;
+        }
+        &::before{
+            position: absolute;
+            top: 50%;
+            left: -58px;
+            @include mq(md) {
+                top: -50%;
+                left: 47%;
+                transform: translateY(-50%);
+                } 
+        }
+        &::after{
+            position: absolute;
+            top: 50%;
+            left: -58px;
+            transform: rotate(90deg);
+            @include mq(md) {
+                top: -50%;
+                left: 47%;
+                }
+        }
+    }
+}

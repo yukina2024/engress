@@ -4,3 +4,16 @@
 /*---------------------------
 single
 ---------------------------*/
+.single-navigation__wapper{
+    padding-block-start: 80px;
+    @include mq(md) {
+        padding-block-start: 60px;
+        } 
+}
+
+.blog-detail{
+    width: calc(100% - 30px);
+    margin-inline-start: auto;
+    padding-inline: 15px;
+    padding-block: 30px;
+}

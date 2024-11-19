@@ -1,13 +1,13 @@
 <footer class="l-footer" id="footer">
     <div class="l-footer__contact">
-        <div class="l-footer-contact-wapper">
+        <div class="l-footer-contact-wrapper">
             <p class="l-footer-text">まずは無料で資料請求から</p>
             <a href="<?php echo esc_url(home_url('price')); ?>" class="c-global__btn-link">
                 <div class="c-global__btn c-btn-orange">
                     資料請求
                 </div>
             </a>
-            <div class="c-global__cotact-link-wapper">
+            <div class="c-global__cotact-link-wrapper">
                 <a href="<?php echo esc_url(home_url('price')); ?>" class="c-global__contact-link">お問い合わせ</a>
             </div>
         </div>

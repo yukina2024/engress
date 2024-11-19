@@ -1,15 +1,54 @@
+@charset "UTF-8";
+/*
+---------------------------
+@use '../foundation/variable' as *;
+
+objectの場合
+@use '../../foundation/variable' as *;
+---------------------------
+*/
+/*---------------------------
+変数
+---------------------------*/
+/*whith*/
+/*color*/
+/*font-size*/
+/*
+【whith 1280】
+12 = 0.75rem
+14 = 0.875rem
+16 = 1rem
+18 = 1.125rem
+20 = 1.25rem
+24 = 1.5rem
+32 = 2rem
+*/
+/* z-index */
+/*---------------------------
+mixin
+---------------------------*/
+/* ブレイクポイントメディアクエリ用 */
+/* 
+@include mq(sp) {
+    display: block;
+    } 
+*/
+/* flex */
+/* 
+    @include flex();
+    */
+/* 
+        @include flex-center;
+    */
 /*---------------------------
 color
 ---------------------------*/
-.bg {
+.u-ander-color {
+  line-height: 1;
   display: inline-block;
-  background-color: #fff;
-  padding: 3px;
-  margin: 0;
-}
-
-.u-required {
-  color: red;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(50%, #F5A623));
+  background: -webkit-linear-gradient(transparent 70%, #F5A623 50%);
+  background: linear-gradient(transparent 70%, #F5A623 50%);
 }
 
 /*---------------------------

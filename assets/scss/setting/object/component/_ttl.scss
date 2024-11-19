@@ -3,3 +3,25 @@
 /*---------------------------
 title
 ---------------------------*/
+
+.c-main-ttl{
+    font-size: $font-size-36;
+    font-weight: 700;
+    line-height: 1;
+    @media only screen and (max-width: 850px) {
+        line-height: 1.25;
+        text-align: center;
+    }
+}
+
+.c-sub-ttl{
+    font-size: $font-size-32;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    color: $basic-c;
+    @media only screen and (max-width: 850px) {
+        line-height: 1.25;
+    }
+}
+

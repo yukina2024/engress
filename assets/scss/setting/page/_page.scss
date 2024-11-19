@@ -1,5 +1,134 @@
 @use "../foundation/variable" as *;
 
 /*---------------------------
-about
+page-fv
 ---------------------------*/
+.page-fv__inner {
+  padding-block-start: 80px;
+  width: 100%;
+  position: relative;
+}
+.page-fv__img-wrapper {
+  width: 100%;
+  height: 221px;
+}
+.page-fv__img {
+  width: 100%;
+  height: 221px;
+  object-fit: cover;
+}
+
+.fv__content {
+  position: absolute;
+  padding-block-start: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 901px;
+}
+.navigation-bg {
+  width: 100%;
+  height: 50px;
+  background-color: $accent-c;
+  display: flex;
+  align-items: center;
+}
+.navigation-wapper {
+  width: calc(100% - 30px);
+  max-width: $section-width;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+/*---------------------------
+price
+---------------------------*/
+
+.price {
+  width: calc(100% - 30px);
+}
+.price__system-inner {
+  width: 100%;
+  margin-block-start: 58px;
+}
+
+.price__system-label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 98px;
+  margin-block-start: 60px;
+  @include mq(md) {
+    flex-direction: column;
+  }
+}
+
+.price__system-text {
+  margin-block-start: 45px;
+  @include mq(md) {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+
+.price__table-inner {
+  width: 100%;
+  margin-block-start: 90px;
+}
+
+.price__table-wrapper {
+  width: 100%;
+  margin-block-start: 70px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  @media only screen and (max-width: 950px) {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+  }
+  @media only screen and (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.price__table-item {
+  width: 220px;
+  height: 503px;
+  flex: 1;
+  @media only screen and (max-width: 950px) {
+    width: 100%;
+  }
+  @media only screen and (max-width: 550px) {
+    height: auto;
+  }
+}
+.price__table-item.p-table__item.p-table__item--featured {
+  @media only screen and (max-width: 550px) {
+    height: clamp(300px, auto, 100%);
+    overflow: visible; /* 必要ならコンテンツがはみ出す部分を調整 */
+  }
+}
+
+/*---------------------------
+blog-list
+---------------------------*/
+
+.blog-list {
+  width: calc(100% - 30px);
+  margin-inline: auto;
+  margin-block-start: 90px;
+  padding-inline: 15px;
+}
+.blog-list__wrapper {
+  width: 100%;
+  margin-block-start: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 61px;
+  @include mq(md) {
+    gap: 30px;
+  }
+}
